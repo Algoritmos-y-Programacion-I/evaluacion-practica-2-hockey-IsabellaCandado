@@ -186,7 +186,7 @@ public class Controller {
             }
         }
         
-        msg += equipos[0].getJugadores()[numJugador].getNombre() + " entra el disco en la red. Gol!!";
+        msg += equipos[0].getJugadores()[numJugador].hacerGol();
         return msg;
     }
 }

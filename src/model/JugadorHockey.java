@@ -50,4 +50,8 @@ public class JugadorHockey extends Persona implements IDesplazarseEnPistaConPalo
     public String pasar() {
         return " le pasa el disco a ";
     }
+
+    public String hacerGol() {
+        return getNombre() + " pasa el disco por la red. Gol!!";
+    }
 }
