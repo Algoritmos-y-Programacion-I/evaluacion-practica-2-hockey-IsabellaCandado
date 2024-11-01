@@ -38,8 +38,8 @@ public class Executable {
 		while (!flag) {
 
 			System.out.println("\n \n Bienvenido al menu:\n");
-			System.out.println("Opciones:\n" + "1. Fixture \n" 
-					+ "2. Precargar informacion \n" + "3. Realizar partido entre 2 equipos \n" + "4. Salir del programa \n");
+			System.out.println("Opciones:\n" + "1. Precargar informacion \n" 
+					+ "2. Fixture \n" + "3. Realizar partido entre 2 equipos \n" + "4. Salir del programa \n");
 
 			int option = escaner.nextInt();
 
@@ -47,15 +47,16 @@ public class Executable {
 
 			switch (option) {
 					case 1:
-
+                        preload();
 						break;
 					case 2:
-
+                        fixture();
 						break;
 					case 3:
-
+                        partido();
 						break;
 					case 4:
+                        System.out.println("Saliendo de la app...");
 						flag = true;
 						System.exit(0);
 						break;
@@ -81,6 +82,22 @@ public class Executable {
         Executable mainApp = new Executable();
         mainApp.run(flag);
 
+    }
+
+    public void preload() {
+        controladora.preload();
+        System.out.println("Informacion precargada exitosamente.");
+
+        System.out.println(controladora.mostrarEquipos());
+        System.out.println(controladora.mostrarArbitros());
+    }
+
+    public void fixture() {
+        System.out.println(controladora.fixture());
+    }
+
+    public void partido() {
+        System.out.println(controladora.jugada());
     }
 
 }

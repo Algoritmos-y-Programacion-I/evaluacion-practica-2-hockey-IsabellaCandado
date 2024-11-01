@@ -1,6 +1,6 @@
 package model;
 
-public  Persona {
+public abstract class Persona {
      String nombre;
      int edad;
 
@@ -23,6 +23,10 @@ public  Persona {
 
     public void setEdad(int edad) {
         this.edad = edad;
+    }
+
+    public String presentarse() {
+        return "Nombre: " + getNombre() + "\nTipo de arbitro: ";
     }
 
 }
